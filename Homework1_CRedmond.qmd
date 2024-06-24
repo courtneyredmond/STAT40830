@@ -16,7 +16,7 @@ format:
       
 execute: 
   eval: true
-  echo: false
+  echo: true
   warning: false
 ---
 
