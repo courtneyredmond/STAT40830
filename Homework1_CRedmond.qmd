@@ -1,0 +1,62 @@
+---
+title: "STAT 40830 Homework 1"
+author: "Courtney Redmond 22208735"
+date: today
+format:
+  html:
+    code-fold: true
+    code-tools: true
+    code-line-numbers: true
+    fontsize: 1.2em
+    toc: true
+    toc-title: '**Contents**'
+    embed-resources: true
+    grid:
+      body-width: 800px
+      
+execute: 
+  eval: true
+  echo: false
+  warning: false
+---
+
+## Introduction
+
+This assignment will make use of the ***Chicken Weights by Feed Type*** dataset, *chickwts*. This dataset is derived from an experiment where six groups of newly hatched chicks were given different feed supplements and weighed after six weeks.
+
+The dataset includes 71 observations of chick weight after six weeks with the minimum, maximum, median, and mean described below, as well as the number of chicks given each experimental diet.
+
+```{r}
+#| label: dataset summary
+
+library(plyr)
+summary(chickwts$weight)
+count(chickwts$feed)
+
+```
+
+## Chick Weights on Different Feed Types
+
+To further explore this dataset, this boxplot shows chick weights at six weeks on the six various feed types.
+
+```{r}
+
+#| label: boxplot
+#| fig-cap: "Chick Weights at Six Weeks"
+
+
+library(ggplot2)
+
+ggplot(data = chickwts) + 
+  geom_boxplot(mapping = aes(x = feed, y = weight, 
+                             color=feed)) +
+  xlab("Feed Type") + 
+  ylab("Chick Weight (g)") +
+  theme_classic()
+
+```
+
+
+## Conclusion
+
+The chicks fed [**casein**]{style="color: orangered;"} and [**sunflower**]{style="color:violet;"} had the highest mean weights at the conclusion of the experiment, while those chicks fed [**horsebean**]{style="color:goldenrod;"} had the lowest mean weight.
