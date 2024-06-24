@@ -35,6 +35,9 @@ count(chickwts$feed)
 
 ```
 
+The chick weights at the end of the experiment ranged from 108.0 - 423.0 grams, with the mean weight of 261.3 grams.
+
+
 ## Chick Weights on Different Feed Types
 
 To further explore this dataset, this boxplot shows chick weights at six weeks on the six various feed types.
@@ -59,4 +62,4 @@ ggplot(data = chickwts) +
 
 ## Conclusion
 
-The chicks fed [**casein**]{style="color: orangered;"} and [**sunflower**]{style="color:violet;"} had the highest mean weights at the conclusion of the experiment, while those chicks fed [**horsebean**]{style="color:goldenrod;"} had the lowest mean weight.
+The chicks fed [**casein**]{style="color: orangered;"} and [**sunflower**]{style="color:violet;"} had the highest mean weights at the conclusion of the experiment, while those chicks fed [**horsebean**]{style="color:goldenrod;"} had the lowest mean weight. Chicks fed soybean, linseed, and meatmeal had weights in between.
